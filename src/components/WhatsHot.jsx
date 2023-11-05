@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import MovieGrid from "./MovieGrid";
 
-const API_KEY = "YOUR_TMDB_API_KEY";
+const API_KEY = "5c410db8c3cae04883900cb34551cc11";
 const WHATS_HOT_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 
 function WhatsHot() {
@@ -24,7 +24,7 @@ function WhatsHot() {
 
   return (
     <div>
-      <h2>What's Hot</h2>
+      <h2 style={{ marginLeft: "35px" }}>What's Hot</h2>
       <MovieGrid movies={movies} />
     </div>
   );

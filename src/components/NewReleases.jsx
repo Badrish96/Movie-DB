@@ -2,8 +2,14 @@
 import React, { useEffect, useState } from "react";
 import MovieCarousel from "./MovieCarousel";
 
-const API_KEY = "YOUR_TMDB_API_KEY";
+const API_KEY = "5c410db8c3cae04883900cb34551cc11";
 const NEW_RELEASES_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
+
+const headingStyle = {
+  fontWeight: "800",
+  fontSize: "30px",
+  marginLeft: "40px",
+};
 
 function NewReleases() {
   const [movies, setMovies] = useState([]);
@@ -24,7 +30,7 @@ function NewReleases() {
 
   return (
     <div>
-      <h2>New Releases</h2>
+      <h2 style={headingStyle}>New Releases</h2>
       <MovieCarousel movies={movies} />
     </div>
   );
