@@ -1,0 +1,21 @@
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+function MovieCarousel({ movies }) {
+  return (
+    <Carousel showArrows={true} showThumbs={false} showStatus={false}>
+      {movies.map((movie) => (
+        <div key={movie.id}>
+          <img
+            src={`https://image.tmdb.org/t/p/w780${movie.backdrop_path}`}
+            alt={movie.title}
+          />
+          <p className="legend">{movie.title}</p>
+        </div>
+      ))}
+    </Carousel>
+  );
+}
+
+export default MovieCarousel;
